@@ -1,5 +1,5 @@
 'use client';
-import { Button, FormControl, TextField } from '@mui/material';
+import { Button, FormControl, Paper, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { useFormState } from 'react-dom';
@@ -14,7 +14,14 @@ export default function Page() {
 
   return (
     <form action={formAction}>
-      <Box sx={{ flexGrow: 1, mt: 4 }}>
+      <Box sx={{ flexGrow: 1, mt: 4, borderRadius: 2, padding: 2 }}>
+        <Paper elevation={3} />
+        <Box
+          component='h2'
+          sx={{ fontSize: 24 }}
+        >
+          Sign Up
+        </Box>
         <Grid
           container
           spacing={2}
@@ -101,6 +108,7 @@ export default function Page() {
             </Button>
           </Grid>
         </Grid>
+        <Paper elevation={3} />
       </Box>
     </form>
   );
